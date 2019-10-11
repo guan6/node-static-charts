@@ -1,0 +1,39 @@
+{
+  "name": "node-static-charts",
+  "version": "1.0.0",
+  "description": "node+echart 图表生成",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development PORT=3001 BASE_URL=http://localhost:3001 nodemon src/app.js --inspect --exec babel-node",
+    "build": "rm -rf server && babel src -d server && cp -r ./src/static ./server/"
+  },
+  "keywords": [
+    "Koa",
+    "Node",
+    "echart",
+    "canvas"
+  ],
+  "author": "405171253@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "2",
+    "babel-polyfill": "^6.26.0",
+    "canvas": "^2.1.0",
+    "echarts": "^4.2.0-rc.2",
+    "glob": "^7.1.3",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.1",
+    "request": "^2.88.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.7.0"
+  }
+}
